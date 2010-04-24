@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:HorizontalPanel addStyleNames="root" ui:field="root" verticalAlignment="ALIGN_MIDDLE" >
+		<g:Cell verticalAlignment='ALIGN_MIDDLE'>
+			<g:Label ui:field="numberLabel" addStyleNames="numberLabel" height="100%"></g:Label>
+		</g:Cell>
+		<g:Cell verticalAlignment='ALIGN_MIDDLE' addStyleNames="arrow">
+			<g:Anchor ui:field="arrowAnchor" addStyleNames="arrowAnchor" >&uarr;</g:Anchor>
+		</g:Cell>
+		<g:VerticalPanel>
+			<g:Anchor ui:field="titleAnchor" addStyleNames="title"></g:Anchor>
+			<g:FlowPanel ui:field="detailsPanel" addStyleNames="detailsPanel"></g:FlowPanel>
+			<g:FlowPanel>
+				<g:Anchor ui:field="commentsAnchor" addStyleNames="comments">0 comments</g:Anchor>
+			</g:FlowPanel>
+		</g:VerticalPanel>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

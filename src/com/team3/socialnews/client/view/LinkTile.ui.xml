@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:spirz="urn:import:com.team3.socialnews.client.view">
+	<spirz:RoundedPanel addStyleNames="linkRoot" ui:field="root">
+		<g:FlowPanel addStyleNames="linkContent" ui:field="content">
+			<g:VerticalPanel  ui:field="linkTitleWrapper" addStyleNames="linkTitleWrapper" >
+				<g:Anchor ui:field="titleAnchor" addStyleNames="linkTitle"></g:Anchor>
+			</g:VerticalPanel>
+			
+			<g:FlowPanel ui:field="buttons" addStyleNames="linkButtons">
+				<g:Anchor ui:field="voteAnchor" addStyleNames="voteButton" >
+				</g:Anchor>
+				<g:Anchor ui:field="unvoteAnchor" addStyleNames="voteButtonVoted" >
+				</g:Anchor>
+				<g:Anchor ui:field="commentsAnchor" addStyleNames="commentsButton">
+				</g:Anchor>
+			</g:FlowPanel>
+			<g:FlowPanel addStyleNames="energyWrapper">
+				<g:Label ui:field="energy" addStyleNames="energy"></g:Label>
+			</g:FlowPanel>
+			<g:FlowPanel ui:field="linkDetails" addStyleNames="linkDetails"></g:FlowPanel>
+		</g:FlowPanel>
+	</spirz:RoundedPanel>
+</ui:UiBinder> 

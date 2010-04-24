@@ -1,0 +1,697 @@
+html { min-height: 100%; margin-bottom: 1px; }
+/* forces a vertical scrollbar do get rid of linkspanel resize glitch */
+
+a {
+	outline: 0px;
+}
+
+body {
+	height: 100%;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+
+.gwt-label {
+	color:black;
+	font-family: Verdana;	
+}
+
+a {
+	text-decoration:none;
+	cursor:pointer;
+	color: black;	
+}
+
+a:hover:visited {
+	color: purple;
+	}
+	
+a:hover {
+	color: blue;
+}
+
+/* Main view */
+
+.mainSection {
+	height:100%;
+	width: 100%;
+	padding:0px;
+}
+
+.logo:hover {
+	cursor: pointer;	
+}
+
+.verticalPanel {
+	height:100%;
+	width:100%;
+}
+
+.version {
+	color:#FFCC66;
+	font-size:x-small;
+}
+
+.accountMenu{
+	text-align:right;
+	padding-right:10px;
+	padding-bottom:5px;
+	height:48px;
+	vertical-align: middle;
+}
+
+.accountMenu a, .accountMenu a:visited, .accountMenu a:hover{
+	color: white !important;
+	font-size: small;
+	font-weight: bold;
+	font-family: Verdana;
+	padding: 10px;
+}
+
+.accountMenu a:hover {
+	text-decoration: underline;
+}
+
+.accountMenuItem {
+	cursor:pointer;	
+
+}
+
+.placeMessageLabel {
+	padding: 5px;
+	padding-top: 15px;
+	padding-left: 10px;
+	font-size: small;
+	color: #C4C4C4;
+	float: left;
+}
+
+.placeErrorLabel {
+	padding: 5px;
+	padding-top: 15px;
+	padding-left: 10px;
+	font-size: small;
+	color: #FF6100;
+	float: left;
+}
+
+.placesPanel {
+	padding-left: 12px;
+	font-weight: bold;
+}
+
+.placesGroupTitle{
+	padding-top: 12px;
+	padding-right: 10px;
+	float: left;
+	color: #A7A3A5;
+	font-size: large;
+}
+
+.placeSelected {
+	font-size: large;
+	color: #FF6100;
+	float: left;
+}
+
+.placeSelected:hover{
+	color: #FF6100;
+	text-decoration: underline;
+}
+
+.place {
+	font-size: large;
+	color: #FF6100;
+	float: left;
+}
+
+.place:hover{
+	color: #FF6100;
+	text-decoration: underline;
+}
+
+/* Link tile (alternate link widget) */
+
+.linkRoot {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+.linkContent {
+	display: block;
+	overflow: hidden;
+	height: 80px;
+	padding-bottom: 20px;
+	width: 100%;
+	padding-left: 10px;
+}
+
+.linkTitleWrapper{
+	display: block;
+	height: 72px;
+	overflow: hidden;
+	vertical-align: middle;
+	float: left;
+	font-size: large;
+	padding-right: 20px
+}
+
+
+.linkTitleWrapper td {
+	height: 70px;
+	overflow: hidden;
+}
+
+a.linkTitle {
+	font-family: Verdana;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	color: #424242;
+	font-size: large;
+	float: left;
+
+}
+
+a.linkTitle:visited {
+	color: #7C7A7B;
+	font-weight: normal;
+}
+
+a.linkTitle:hover:visited {
+	color: purple;
+}
+
+a.smallTitle
+{
+	font-size: small;
+}
+
+.energyWrapper {
+	padding-top: 3px;
+	padding-right: 30px;
+	float: right;
+}
+
+.energy {
+	padding:5px;
+	color: #A7A3A5;
+	font-size: x-small;
+}
+
+.linkDetails {
+	font-size: x-small;
+	color: #A7A3A5;
+	padding-top: 8px;
+	padding-right: 15px;
+	float:right;
+}
+
+.failureMessage {
+	color: red;
+}
+
+.asyncWorkMessage {
+	color: green;
+	display: inline;
+	font-size: x-small;
+	padding-left: 10px;
+}
+
+.linkButtons 
+{
+	clear: left;	
+	float: left;
+	font-size: small;
+	padding-top: 3px;
+	padding-left: 2px;
+}
+
+.linkButtons a
+{
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 27px;
+	padding-right: 5px;	
+	color: #A7A3A5;
+	font-weight: bold;
+}
+
+a.commentsButton
+{
+	margin-left: 5px;
+	float: right;	
+	color: #A7A3A5;
+}
+
+a.commentsButton:visited
+{
+	color:#A7A3A5; 
+}
+
+a.voteButton:hover, a.voteButton:hover:visited, a.commentsButton:hover, a.commentsButton:hover:visited 
+{
+	color: black;
+}
+
+a.voteButtonVoted{
+	color: #FF6100;
+	float: left;
+}
+
+a.voteButtonVoted:hover
+{
+	color: black;
+}
+
+/* Link panel */
+
+.linksPanel {
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.orderedLinks {
+	clear: left;
+	width: 100%;
+}
+
+.refreshDate {
+	padding: 5px;
+	padding-top: 15px;
+	color: #5C5C5C;
+	font-size: x-small;
+}
+
+.pagerPanel {
+	clear: left;
+
+	padding-top: 10px;
+	color: #5C5C5C;
+	text-align: center;
+}
+
+.pagerPanel a, .pagerPanel a:hover, .pagerPanel a:visited {
+	padding: 10px;
+	padding-top: 1px;
+	padding-bottom: 15px;
+	color: #5C5C5C;
+	font-size: 2.7em;
+}
+
+.pagerPanel a:hover {
+	text-decoration: underline;
+}
+
+.rightSection {
+	float: right;
+}
+
+.noLinksLabel{
+	font-size: small;
+	color: #FF6100;
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+/* Submit link panel see spirz.css for more*/
+
+.submitLinkPanel{
+	font-family: Verdana;
+	margin: 5px;
+}
+
+.submitPanelRoot{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.titleField, .urlField {
+	color: black;
+	width: 100%;
+	padding: 3px;
+	font-family: Verdana;
+	font-size:large;
+}
+
+.textareaWrapper {
+	padding-right:10px;
+}
+
+.labelWrapper{
+	margin-right:4px;
+}
+
+.label {
+	float:left;
+	padding-right:0;
+	font-family: Verdana;		
+	margin-top: 5px;
+	margin-bottom: 2px;	
+}
+
+button.submitButton {
+	float: left;
+	display: block;
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 7px;
+	width: 145px;
+}
+
+.formTitle {
+	font-size:large;	
+	color: #A7A3A5;
+	float: left;
+	margin-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.charactersLeft{
+	margin-top: 6px;
+	float: right;
+	font-size: 0.95em;
+	color: #A7A3A5;
+}
+
+a.linkTest, a.linkTest:visited{
+	float: right;
+	color: #A7A3A5;
+	font-size: 0.95em;
+	padding-top: 6px;
+	padding-left: 25px;
+}
+
+a.linkTest:hover{
+	color: #A7A3A5;
+	text-decoration: underline;
+}
+
+.errorLabel{
+	padding-left: 10px;
+	padding-top: 30px;
+	color: #FF6100;
+}
+
+/* Admin panel*/
+
+.adminPanel{
+	margin: 5px;
+}
+
+.adminField input{
+	width: 35px;
+	margin-left: 5px;
+}
+
+.adminField {
+	clear: left;
+}
+
+.adminField div {
+	padding-top: 6px;
+}
+
+button.loadTestButton {
+	margin-top: 5px;
+	clear: left;
+}
+
+.loadTestReport {
+	padding: 15px;
+	padding-top: 5px;
+}
+
+.reportTitle {
+	font-weight: bold;
+}
+
+.checkBoxWrapper{
+	width: 150px;
+}
+
+/* Link comments */
+
+.commentsLinkTile .roundedTopLeft,
+.commentsLinkTile .roundedLeft,
+.commentsLinkTile .roundedBottomLeft,
+.commentsLinkTile .roundedTop,
+.commentsLinkTile .roundedBottom,
+.commentsLinkTile .roundedBottomRight,
+.commentsLinkTile .roundedRight,
+.commentsLinkTile .roundedTopRight{
+	background: none;
+	height: 0px;
+	width: 0px;
+}
+.commentsLinkTile {
+	margin: 5px;
+}
+
+.rootComment {
+	color: #424242;
+	font-family: Verdana;
+	margin: 5px;
+}
+
+.rootComment .roundedContainer{
+	padding: 5px;
+}
+
+.commentsSubmitFormWrapper{
+	margin: 5px;
+}
+
+.rootComment p {
+	margin-bottom:3px;
+	margin-top:3px;
+	padding:0px;
+	
+}
+.rootComment p, .rootCommentAuthorNickname {
+	font-size:medium;
+}
+
+.rootCommentReplies {
+	border-top-color:#C4C4C4;
+	border-top-style:solid;
+	border-top-width:1px;	
+	width:100%;
+	margin-top:5px;
+	padding-top: 5px;
+
+}
+
+.rootCommentReplies, .rootCommentReplyForm, p.commentReplyBody {
+	font-size: small;
+}
+
+p.commentReplyBody{
+	padding-left: 2px;
+}
+
+.rootCommentAuthorNickname {
+	color:#A7A3A5;
+	float:left;
+	margin-right:10px;
+}
+
+.linkCommentsPanel {
+	margin-left:10px;	
+}
+
+.commentReply{
+	padding-top: 5px;
+}
+
+.commentsSection {
+	width:100%;
+}
+
+.commentsSectionTitle {
+	font-size:large;
+	font-color:#898989;
+}
+.commentDetails {
+	height:23px;
+		
+}
+
+.commentDetails .date{
+	font-size: small;
+	padding-top: 6px;
+	padding-left: 2px;
+	color: #A7A3A5;
+}
+.commentDetails a.reply {
+	font-size: small;
+	padding-top: 6px;
+	padding-left: 23px;
+	display: block;
+	color: #A7A3A5;
+	font-weight: bold;
+}
+.commentDetails a.reply:hover {
+	text-decoration: underline;
+}
+.commentDetails a.voteButton {
+	font-size: small;
+	padding-top: 4px;
+	display: block;
+	color: #A7A3A5;
+}
+.commentDetails a.voteButtonVoted {
+	color: #FF6100;
+	padding-top: 4px;
+	display: block;
+}
+
+.commentReply a.authorNickname{
+	float: left;
+	font-size: small;
+	margin-right: 10px;
+	color: #A7A3A5;
+	padding-left: 2px;
+}
+
+.commentReply .commentDetails a.reply,
+.commentReply .commentDetails .date {
+	font-size: x-small;
+	padding-top: 8px;
+}
+
+.commentsPanel {
+	clear: both;
+	width:100%;
+}
+
+.commentSubmitForm{
+	width: 100%;
+	padding: 5px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	
+}
+
+.submitCommentBodyAndButton{
+	width: 100%;
+}
+
+.submitCommentBody{
+	width: 100%;
+	color: black;
+	font-size: normal;
+	padding: 5px;
+	font-family: Verdana;
+}
+
+.submitCommentBodyUnfocused
+{
+	width: 100%;
+	color: #A7A3A5;
+	font-size: large;
+	font-family: Verdana;
+}
+.commentReplyTextArea {
+	width: 75%;
+	font-family: Verdana;
+	padding: 5px;
+}
+
+.commentReplyFormWrapper{
+	width: 100%;
+}
+
+.voteButtons 
+{
+	clear: left;	
+	float: left;
+	font-size: small;
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+.voteButtons a
+{
+	padding-top: 4px;
+	padding-bottom: 5px;
+	padding-left: 27px;
+	padding-right: 5px;	
+	font-weight: bold;
+}
+
+.processingPanel
+{
+	font-size:x-large;
+	text-align:center;
+	vertical-align:middle;
+	color: #A7A3A5;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+
+/* Registration panel */
+
+.registrationPanel{
+	width: 100%;
+	text-align: center;
+}
+
+.registrationPanel .roundedRoot{
+	width: 480px;
+	margin: auto;
+}
+.setNicknameForm .errorLabel {
+	float: left;
+	padding: 0px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+.nicknameField {
+	clear: left;
+	float: left;
+	color: black;
+	width: 75%;
+	padding: 3px;
+	font-family: Verdana;
+	font-size:large;
+	margin-top: 5px;
+}
+
+button.nicknameButton {
+	clear: left;
+	float: left;
+	padding: 7px;
+	margin-top: 5px;
+}
+
+.commentsPleaseLoginMessage {
+	font-size:large;
+	color:#A7A3A5;
+	text-align:center;
+	width:100%;
+}

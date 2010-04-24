@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:FlowPanel  addStyleNames="voteButtons">
+		<g:Anchor 
+			ui:field="voteAnchor" 
+			addStyleNames="voteButton">
+		</g:Anchor>
+		<g:Anchor 
+			ui:field="unvoteAnchor" 
+			addStyleNames="voteButtonVoted">
+		</g:Anchor>
+	</g:FlowPanel>
+</ui:UiBinder> 

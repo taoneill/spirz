@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	</ui:style>
+	<g:FlowPanel ui:field="roundedRoot" addStyleNames="roundedRoot">
+		<g:HorizontalPanel addStyleNames="row" height="100%">
+			<g:VerticalPanel addStyleNames="leftColumn" height="100%">
+				<g:FlowPanel 
+					ui:field="roundedTopLeft" 
+					addStyleNames="roundedTopLeft">
+				</g:FlowPanel>
+				<g:Cell height="100%">
+					<g:FlowPanel 
+						ui:field="roundedLeft" 
+						addStyleNames="roundedLeft"
+						height="100%">
+					</g:FlowPanel>
+				</g:Cell>
+				<g:FlowPanel 
+					ui:field="roundedBottomLeft" 
+					addStyleNames="roundedBottomLeft">
+				</g:FlowPanel>
+			</g:VerticalPanel>
+			<g:Cell width="100%">
+				<g:VerticalPanel ui:field="midColumn" addStyleNames="midColumn" width="100%">
+					<g:FlowPanel ui:field="roundedTop" addStyleNames="roundedTop"></g:FlowPanel>
+					<g:FlowPanel ui:field="roundedContainer" styleName="roundedContainer">
+						<!-- Content goes here! -->
+					</g:FlowPanel>
+					<g:FlowPanel ui:field="roundedBottom" addStyleNames="roundedBottom"></g:FlowPanel>	
+				</g:VerticalPanel>
+			</g:Cell>
+			<g:VerticalPanel addStyleNames="rightColumn" height="100%">
+				<g:FlowPanel 
+					ui:field="roundedTopRight" 
+					addStyleNames="roundedTopRight"></g:FlowPanel>
+				<g:Cell height="100%">
+					<g:FlowPanel 
+						ui:field="roundedRight" 
+						addStyleNames="roundedRight" 
+						height="100%">
+					</g:FlowPanel>
+				</g:Cell>
+				<g:FlowPanel 
+					ui:field="roundedBottomRight" 
+					addStyleNames="roundedBottomRight">
+				</g:FlowPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 

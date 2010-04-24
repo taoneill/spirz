@@ -1,0 +1,17 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:spirz="urn:import:com.team3.socialnews.client.view">
+	<ui:style>	
+	</ui:style>
+	<g:FlowPanel styleName="registrationPanel">
+		<spirz:RoundedPanel>
+			<g:FlowPanel styleName="setNicknameForm">
+				<g:Label styleName="formTitle">Before we start, please choose a nickname:</g:Label>
+				<g:TextBox ui:field="nicknameField" styleName="nicknameField"></g:TextBox>
+				<g:Button ui:field="submitButton" addStyleNames="gwt-Button nicknameButton" >Apply nickname</g:Button>
+				<g:Label ui:field="errorLabel" styleName="errorLabel"></g:Label>
+			</g:FlowPanel>
+		</spirz:RoundedPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 

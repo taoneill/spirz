@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:VerticalPanel styleName="submitCommentBodyAndButton">
+		<g:TextArea ui:field="submitBody" styleName="submitCommentBody"></g:TextArea>
+		<g:Button ui:field="submitButton" addStyleNames="gwt-Button submitCommentButton">Post</g:Button>
+	</g:VerticalPanel>
+</ui:UiBinder> 

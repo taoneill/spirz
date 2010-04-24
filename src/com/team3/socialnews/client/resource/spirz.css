@@ -1,0 +1,240 @@
+@url grayplus voteButtonEnabled;
+a.voteButton
+{
+	background-image: grayplus;
+	background-repeat: no-repeat;
+	width: 30px;
+	display: inline-block;
+	padding-left: 27px;
+	height:23px;
+}
+
+@url votedplus voteButtonOn;
+a.voteButtonVoted
+{
+	background-image: votedplus;
+	background-repeat: no-repeat;
+	width: 30px;
+	display: inline-block;
+	padding-left: 27px;
+	height:23px;
+}
+
+@url comments commentButton;
+a.commentsButton
+{
+	background-image: comments;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+
+/* Rounded Panel */
+
+.roundedRoot {	
+}
+
+.row {
+	width: 100%;
+	float: right;
+}
+
+.leftColumn {
+	width: 16px;
+}
+
+.midColumn{
+	
+	float: left;
+}
+
+.rightColumn{
+	width: 16px;
+}
+
+.roundedTopLeft, roundedTopLeft1{
+	width: 16px;
+	height: 16px;
+}
+@url top-left plainLinkBoxTopLeft;
+.roundedTopLeft{
+	background-image: top-left;
+}
+@url top-left-1 firstLinkBoxTopLeft;
+.roundedTopLeft1{
+	background-image: top-left-1;
+}
+
+.roundedLeft, .rounderLeft1{
+	background-repeat: repeat-y;
+	width: 16px;
+}
+@url box-left plainLinkBoxLeft;
+.roundedLeft{
+	background-image: box-left;
+}
+@url box-left-1 firstLinkBoxLeft;
+.roundedLeft1{
+	background-image: box-left-1;
+}
+
+.roundedBottomLeft, .roundedBottomLeft1{
+	width: 16px;
+	height: 16px;
+}
+@url bottom-left plainLinkBoxBottomLeft;
+.roundedBottomLeft{
+	background-image: bottom-left;
+}
+@url bottom-left-1 firstLinkBoxBottomLeft;
+.roundedBottomLeft1{
+	background-image: bottom-left-1;
+}
+
+
+.roundedTop, .roundedTop1{
+	background-repeat: repeat-x;
+	height: 16px;
+	width: 100%;
+}
+@url box-top plainLinkBoxTop;
+.roundedTop{
+	background-image: box-top;
+}
+@url box-top-1 firstLinkBoxTop;
+.roundedTop1{
+	background-image: box-top-1;
+}
+
+.roundedBottom, .roundedBottom1{
+	background-repeat: repeat-x;
+	height: 16px;
+	width: 100%;
+}
+@url box-bottom plainLinkBoxBottom;
+.roundedBottom{
+	background-image: box-bottom;
+}
+@url box-bottom-1 firstLinkBoxBottom;
+.roundedBottom1{
+	background-image: box-bottom-1;
+}
+
+.roundedTopRight, .roundedTopRight1{
+	width: 16px;
+	height: 16px;
+}
+@url top-right plainLinkBoxTopRight;
+.roundedTopRight{
+	background-image: top-right;
+}
+@url top-right-1 firstLinkBoxTopRight;
+.roundedTopRight1{
+	background-image: top-right-1;
+}
+
+.roundedRight, .roundedRight1{
+	background-repeat: repeat-y;
+	width: 16px;
+}
+@url box-right plainLinkBoxRight;
+.roundedRight{
+	background-image: box-right;
+}
+@url box-right-1 firstLinkBoxRight;
+.roundedRight1{
+	background-image: box-right-1;
+}
+
+.linkRoot .roundedRight, .linkRoot .roundedLeft{
+	height: 100px;
+}
+
+.submitLinkPanel .roundedRight, .submitLinkPanel .roundedLeft{
+	height: 241px;
+}
+
+.submitLinkPanel .roundedContainer{
+	height: 241px;
+}
+
+.adminPanel .roundedRight, .adminPanel .roundedLeft{
+	/*height: 714px;*/
+}
+.adminPanel .roundedContainer{
+	/*height: 714px;*/
+}
+
+.roundedBottomRight, .roundedBottomRight1{
+	width: 16px;
+	height: 16px;
+}
+@url bottom-right plainLinkBoxBottomRight;
+.roundedBottomRight{
+	background-image: bottom-right;
+}
+@url bottom-right-1 firstLinkBoxBottomRight;
+.roundedBottomRight1{
+	background-image: bottom-right-1;
+}
+
+/* Headers */
+
+@url banner-bg bannerBg;
+.bannerSection {
+	height: 48px;
+	background-image: banner-bg;
+	background-repeat: repeat-x;
+	background-position: 257px;
+}
+
+@url logo bannerLogo;
+.logo {
+	height: 48px;
+	width: 257px;
+	background-image: logo;
+	background-repeat: no-repeat;
+}
+
+@url links-head secondMenuBg;
+.placesPanel {
+	height: 48px;
+	background-image: links-head;
+	background-repeat: repeat-x;
+	margin-bottom: 3px;
+}
+
+.placeButton {
+	float: left;
+	height: 46px;
+}
+
+.placeButtonSelected {
+	float: left;
+	height: 46px;
+}
+
+.left, .right{
+	height: 46px;
+	width: 11px;
+}
+
+.mid {
+	padding-top: 12px;
+	height: 34px;
+	}
+
+@url left-place-btn secondMenuBgPressedLeft;
+.placeButtonSelected .left{
+	background-image: left-place-btn;
+}
+
+@url right-place-btn secondMenuBgPressedRight;
+.placeButtonSelected .right{
+	background-image: right-place-btn;
+}
+
+@url mid-place-btn secondMenuBgPressed;
+.placeButtonSelected .mid{
+	background-image: mid-place-btn;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:spirz="urn:import:com.team3.socialnews.client.view">
+	<ui:style>
+		.rootCommentDetails td {
+				padding-right:5px;
+		}
+	</ui:style>
+	<spirz:RoundedPanel addStyleNames="rootComment" ui:field="roundedPanel">
+		<g:HTMLPanel addStyleNames="rootCommentBody">
+			<g:Anchor ui:field="authorNickname" addStyleNames="rootCommentAuthorNickname"></g:Anchor>
+			<p ui:field="bodyContent"></p>
+		</g:HTMLPanel>
+			<g:HorizontalPanel addStyleNames="commentDetails {style.rootCommentDetails}">
+				<spirz:VoteButton ui:field="voteButton"/>
+				<g:Label ui:field="date" styleName="date"></g:Label>
+				<g:Anchor ui:field="reply" styleName="reply">Reply</g:Anchor>
+			</g:HorizontalPanel>	
+		<g:VerticalPanel ui:field="replies" addStyleNames="rootCommentReplies">
+			<!-- Replies go here -->
+		</g:VerticalPanel>
+		<g:FlowPanel ui:field="replyFormPanel" addStyleNames="rootCommentReplyForm">
+			<!--  Reply Form appears here -->
+		</g:FlowPanel>
+	</spirz:RoundedPanel>
+</ui:UiBinder> 

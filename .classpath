@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gin-1.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/guice-2.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-dispatch-1.0.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-presenter-1.0.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/guice-servlet-2.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/mockito-all-1.8.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="test-lib/appengine-api-stubs.jar"/>
+	<classpathentry kind="lib" path="test-lib/appengine-local-runtime.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-presenter-1.0.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jsr107cache-1.1.jar"/>
+	<classpathentry kind="lib" path="test-lib/appengine-api-labs.jar"/>
+	<classpathentry kind="lib" path="test-lib/appengine-api.jar"/>
+	<classpathentry kind="lib" path="test-lib/appengine-testing.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/highway"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

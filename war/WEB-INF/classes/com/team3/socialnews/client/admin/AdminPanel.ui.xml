@@ -1,0 +1,63 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:spirz="urn:import:com.team3.socialnews.client.view">
+	<spirz:RoundedPanel addStyleNames="adminPanel" ui:field="roundedPanel">
+		<g:VerticalPanel>
+			<g:Label addStyleNames="formTitle">Site status</g:Label>
+			<g:Label ui:field="hotLinksCount"></g:Label>
+			<g:Label>&nbsp;</g:Label>
+			<g:Label>Which links get damped in the predator territory? i.e. In what proportion does the set of oldest links get damped?:</g:Label>
+			<g:Label ui:field="oldestHitProbability"></g:Label>
+			<g:Label ui:field="newestHitProbability"></g:Label>
+			<g:Label ui:field="territoryOverflow"></g:Label>
+			
+			<g:Label>&nbsp;</g:Label>
+			<g:Label>&nbsp;</g:Label>
+			<g:Label addStyleNames="formTitle">Vote algorithm parameters</g:Label>
+			<g:HorizontalPanel addStyleNames="adminField"> 
+				<g:Label>Damping knob:</g:Label><g:TextBox ui:field="dampingKnob"></g:TextBox>
+			</g:HorizontalPanel>
+			<g:Label>Each vote spawns a damp vote as a reaction, directed at a link older than the one voted on.</g:Label>
+			<g:Label>This knob is the proportion by which each vote energy point translates into damping energy.</g:Label>
+			<g:Label>Set at 0-100 and the hot page grow; 100, its size steadies; 100+, it shrinks.</g:Label>
+			<g:Label>&nbsp;</g:Label>
+			<g:HorizontalPanel addStyleNames="adminField"> 
+				<g:Label>Survival parameter:</g:Label><g:TextBox ui:field="survivalParameter"></g:TextBox>
+			</g:HorizontalPanel>
+			<g:Label>Smaller/close to than 1 means the link predator will always target the very oldest links.</g:Label>
+			<g:Label>Greater than 1 mean the exponential distribution flattens and newer links in the territory become bigger targets.</g:Label>
+			<g:Label>A large value causes more damp votes to be allocated at random.</g:Label>
+			<g:Label>&nbsp;</g:Label>
+			<g:HorizontalPanel addStyleNames="adminField"> 
+				<g:Label>Predator territory:</g:Label><g:TextBox ui:field="territory"></g:TextBox>
+			</g:HorizontalPanel>
+			<g:Label>Limits the maximum number of older links - relative to the one just voted on - that should be considered as possible damp vote candidates.</g:Label>
+			<g:Label>E.g.: use small value to limit damping to the very oldest links.</g:Label>
+			<g:Button ui:field="saveConfigButton" addStyleNames="loadTestButton" >Save config</g:Button>
+						
+			<g:Label>&nbsp;</g:Label>
+			<g:Label>&nbsp;</g:Label>
+			<g:Label addStyleNames="formTitle">Load testing (zombies!)</g:Label>
+			<g:HorizontalPanel addStyleNames="adminField"> 
+				<g:Label>Test duration in seconds:</g:Label><g:TextBox ui:field="durationText">15</g:TextBox>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel addStyleNames="adminField"> 
+				<g:Label>Requests per second max:</g:Label><g:TextBox ui:field="reqsPerSecText">5</g:TextBox>
+			</g:HorizontalPanel>
+			<g:CheckBox ui:field="waitForResponse"> Wait for response between requests</g:CheckBox>
+			
+			<g:Button ui:field="loadTestButton" addStyleNames="loadTestButton" ></g:Button>
+			<g:VerticalPanel ui:field="loadTestReport" addStyleNames="loadTestReport">
+				<g:Label ui:field="reportTitle" addStyleNames="reportTitle"></g:Label>
+				<g:Label ui:field="duration"></g:Label>
+				<g:Label ui:field="requestsSent"></g:Label>
+				<g:Label ui:field="reqsSentPerSec"></g:Label>
+				<g:Label ui:field="succeeded"></g:Label>
+				<g:Label ui:field="failed"></g:Label>				
+				<g:Label ui:field="responseTime"></g:Label>
+				<g:Anchor ui:field="saveReport">Save report</g:Anchor>
+			</g:VerticalPanel>
+		</g:VerticalPanel>
+	</spirz:RoundedPanel> 
+</ui:UiBinder> 

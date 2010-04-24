@@ -1,0 +1,40 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' 
+	xmlns:socialnews='urn:import:com.team3.socialnews.client.view'>
+	<ui:style>
+	</ui:style>
+	<g:VerticalPanel ui:field="rootPanel" addStyleNames="verticalPanel">
+		<g:HorizontalPanel ui:field="bannerSection" addStyleNames="bannerSection" width="100%">
+			<g:FocusPanel ui:field="logo" addStyleNames="logo">
+			</g:FocusPanel>
+			<g:Cell horizontalAlignment="ALIGN_RIGHT">
+				<g:HorizontalPanel>
+					<g:HorizontalPanel addStyleNames="accountMenu" ui:field="accountMenu">
+					</g:HorizontalPanel>
+				</g:HorizontalPanel>
+			</g:Cell>
+		</g:HorizontalPanel>
+		<g:FlowPanel addStyleNames="placesPanel">
+			<g:Label ui:field="linkPlacesTitle" addStyleNames="placesGroupTitle">links:</g:Label>
+			<g:HorizontalPanel  ui:field="hotButton"  addStyleNames="placeButtonSelected">
+				<g:FlowPanel styleName="left"></g:FlowPanel>
+				<g:FlowPanel styleName="mid">
+					<g:Anchor ui:field="hotAnchor" addStyleNames="placeSelected">hot</g:Anchor>
+				</g:FlowPanel>
+				<g:FlowPanel styleName="right"></g:FlowPanel>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel ui:field="newButton"  addStyleNames="placeButton">
+				<g:FlowPanel styleName="left"></g:FlowPanel>
+				<g:FlowPanel styleName="mid">
+					<g:Anchor ui:field="newAnchor" addStyleNames="place">new</g:Anchor>
+				</g:FlowPanel>					
+				<g:FlowPanel styleName="right"></g:FlowPanel>
+			</g:HorizontalPanel>
+			
+			<g:Label ui:field="messageLabel" styleName="placeMessageLabel"></g:Label>
+		</g:FlowPanel>
+		<g:HorizontalPanel ui:field="mainSection" addStyleNames="mainSection">
+			<!-- place content goes here  -->		
+		</g:HorizontalPanel>
+	</g:VerticalPanel>		
+</ui:UiBinder>

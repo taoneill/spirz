@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<g:FlowPanel ui:field="linksPanel" styleName="linksPanel">
+			<g:FlowPanel ui:field="rightSection" addStyleNames="rightSection">
+			</g:FlowPanel>
+			
+			<g:FlowPanel ui:field="orderedLinks" addStyleNames="orderedLinks">
+			</g:FlowPanel>
+			
+			<g:HTMLPanel ui:field="pagerPanel" addStyleNames="pagerPanel" visible="false">
+				<g:Anchor ui:field="previousAnchor" styleName="previousAnchor" visible="false">prev</g:Anchor>
+				<g:Anchor ui:field="nextAnchor" styleName="nextAnchor" >next</g:Anchor>
+			</g:HTMLPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 

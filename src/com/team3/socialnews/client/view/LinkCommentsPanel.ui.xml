@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:spirz="urn:import:com.team3.socialnews.client.view">
+	<g:VerticalPanel width="100%">
+		<spirz:AdjustedColumns
+			ui:field="topPanel"
+			width="100%">
+				<g:FlowPanel ui:field="linkTilePanel" styleName="commentsLinkTile">
+				</g:FlowPanel>
+				<g:FlowPanel>
+					<spirz:RoundedPanel styleName="commentsSubmitFormWrapper" ui:field="submitFormWrapper" visible="false">
+						<g:VerticalPanel ui:field="submitForm" addStyleNames="commentSubmitForm">
+						</g:VerticalPanel>
+					</spirz:RoundedPanel>
+				</g:FlowPanel>
+		</spirz:AdjustedColumns>
+		<spirz:AdjustedColumns 
+			ui:field="commentsPanel" 
+			addStyleNames="commentsPanel">
+			
+		</spirz:AdjustedColumns>
+		<g:FlowPanel ui:field="processingPanel" styleName="processingPanel">
+			<g:Label>Fetching comments...</g:Label>
+		</g:FlowPanel>
+		<g:FlowPanel ui:field="noCommentsPanel" styleName="processingPanel" visible="false">
+			<g:Label ui:field="noCommentsMessage">No comments submitted yet!</g:Label>
+		</g:FlowPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 
