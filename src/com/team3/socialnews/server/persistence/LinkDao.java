@@ -1,10 +1,12 @@
 package com.team3.socialnews.server.persistence;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.apptao.highway.server.Highway;
 
 import com.google.inject.Inject;
+import com.googlecode.objectify.Query;
 import com.team3.socialnews.client.Order;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LinkVote;
@@ -20,8 +22,22 @@ public class LinkDao implements LinkRepository {
 
 	@Override
 	public List<Link> get(Order order, long start, long finish) {
-		// TODO Auto-generated method stub
-		return null;
+		Query getLinks = hwy.dao().query(Link.class);
+		getLinks.offset((int)start).limit((int)(finish-start));
+		if(order == Order.CHRONOLOGICAL){
+			getLinks.order("createDate");
+		}
+		else if (order == Order.HOT) {
+			getLinks.filter("energy >", 0).order("-energy");
+			// assume minimum energy for hot page is 1
+		}
+		else {
+			// Order.NEW
+			getLinks.order("-createDate");
+		}
+	
+		List<Link> links = (List<Link>) getLinks.fetch();
+		return links;
 	}
 
 	@Override
@@ -32,14 +48,14 @@ public class LinkDao implements LinkRepository {
 	@Override
 	public Link submit(String title, String url, String userId,
 			String submitterNickname) {
-		// TODO Auto-generated method stub
-		return null;
+		Link link = new Link(title, url, userId, submitterNickname);
+		hwy.dao().put(link);
+		return link;
 	}
 	
 	@Override
 	public void voteOnLink(Long linkId, int energyContribution) {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override

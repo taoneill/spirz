@@ -8,7 +8,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/aopalliance.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gin-1.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/guice-2.0.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-dispatch-1.0.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-presenter-1.0.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/guice-servlet-2.0.jar"/>
 	<classpathentry kind="lib" path="C:/dev/spirz/test-lib/mockito-all-1.8.2.jar"/>
@@ -21,5 +20,6 @@
 	<classpathentry kind="lib" path="test-lib/appengine-testing.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/highway"/>
 	<classpathentry kind="lib" path="C:/dev/spirz/war/WEB-INF/lib/objectify-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/spirz/war/WEB-INF/lib/gwt-dispatch-snapshot-12april2010-nospring.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
