@@ -48,10 +48,10 @@ public class Link implements Serializable {
 	}
 	
 	/**
-	 * @param url The url of the link.
-	 * @param title The title of the link.
-	 * @param submitterId The ID of the user who submitted the link.
-	 * @param submitterNickname The nickname of the user who submitted the link.
+	 * @param url The url of the link
+	 * @param title The title of the link
+	 * @param submitterId The ID of the user who submitted the link
+	 * @param submitterNickname The nickname of the user who submitted the link
 	 */
 	public Link(String url, String title, String submitterId, String submitterNickname) {
 		this();

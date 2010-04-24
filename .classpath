@@ -20,6 +20,5 @@
 	<classpathentry kind="lib" path="test-lib/appengine-api-labs.jar"/>
 	<classpathentry kind="lib" path="test-lib/appengine-api.jar"/>
 	<classpathentry kind="lib" path="test-lib/appengine-testing.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/highway"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
