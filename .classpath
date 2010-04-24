@@ -20,5 +20,6 @@
 	<classpathentry kind="lib" path="test-lib/appengine-api.jar"/>
 	<classpathentry kind="lib" path="test-lib/appengine-testing.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/highway"/>
+	<classpathentry kind="lib" path="C:/dev/spirz/war/WEB-INF/lib/objectify-2.1.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

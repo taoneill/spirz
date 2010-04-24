@@ -1,46 +1,31 @@
 package com.team3.socialnews.shared.model;
 
-import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Id;
+import com.googlecode.objectify.annotation.*;;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
-
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class Link implements Serializable {
+@Cached
+public class Link {
 	
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Long id;
+	@Id Long id;
 	
-	@Persistent
 	private String url;
 	
-	@Persistent
 	private String title;
 	
-	@Persistent
 	private Date createDate;
 
-	@Persistent
 	private String nickname;
 	
-	@Persistent
 	private Integer energy = 0;
 	
-	@Persistent
 	private Integer voteTotal = 0;
 	
-	@Persistent
 	private Integer commentTotal = 0;
 
-	@Persistent
+	@Unindexed
 	private String submitterId;
 	
-	@Persistent
 	private Boolean hot = false;
 	
 	public Link() {
