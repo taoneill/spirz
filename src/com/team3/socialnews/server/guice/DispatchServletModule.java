@@ -1,6 +1,6 @@
 package com.team3.socialnews.server.guice;
 
-import net.customware.gwt.dispatch.server.service.DispatchServiceServlet;
+import net.customware.gwt.dispatch.server.guice.GuiceStandardDispatchServlet;
 
 import com.google.inject.Singleton;
 import com.google.inject.matcher.Matchers;
@@ -30,7 +30,7 @@ import com.team3.socialnews.server.vote.VoteEnergyCalculator;
 public class DispatchServletModule extends ServletModule  {
 	
     protected void configureServlets() {
-    	serve("/socialnews/dispatch").with(DispatchServiceServlet.class);
+    	serve("/socialnews/dispatch").with(GuiceStandardDispatchServlet.class);
     	bind(LinkRepository.class).to(LinkRepositoryImpl.class).in(Singleton.class);
     	bind(LinkVoteRepository.class).to(LinkVoteRepositoryImpl.class).in(Singleton.class);
     	bind(LinkDampVoteRepository.class).to(LinkDampVoteRepositoryImpl.class).in(Singleton.class);
