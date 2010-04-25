@@ -31,25 +31,8 @@ public class DispatchServletModule extends ServletModule  {
 	
     protected void configureServlets() {
     	serve("/socialnews/dispatch").with(GuiceStandardDispatchServlet.class);
-    	bind(LinkRepository.class).to(LinkRepositoryImpl.class).in(Singleton.class);
-    	bind(LinkVoteRepository.class).to(LinkVoteRepositoryImpl.class).in(Singleton.class);
-    	bind(LinkDampVoteRepository.class).to(LinkDampVoteRepositoryImpl.class).in(Singleton.class);
-    	bind(CommentRepository.class).to(CommentRepositoryImpl.class).in(Singleton.class);
-    	bind(CommentVoteRepository.class).to(CommentVoteRepositoryImpl.class).in(Singleton.class);
-    	bind(LoginManager.class).to(LoginManagerImpl.class).in(Singleton.class);
-    	bind(LocalUserRepository.class).to(LocalUserRepositoryImpl.class).in(Singleton.class);
-    	
-    	bind(SpirzCache.class).in(Singleton.class);
-    	bind(LinkPredator.class).in(Singleton.class);
-    	
-    	bind(VoteEnergyCalculator.class);
-    	bind(LinkAgeModifier.class);
-    	bind(CurrentLinkEnergyModifier.class);
-    	
-    	// Bind the @RequiresLogin interceptor
-    	bindInterceptor(Matchers.any(), 
-				Matchers.annotatedWith(RequiresLogin.class), 
-				new RequiresLoginInterceptor());
+  
+    
     }
     
 }	

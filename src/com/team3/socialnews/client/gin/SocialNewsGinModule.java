@@ -1,5 +1,6 @@
 package com.team3.socialnews.client.gin;
 
+import net.apptao.highway.client.gin.HwyGinModule;
 import net.customware.gwt.dispatch.client.DispatchAsync;
 import net.customware.gwt.dispatch.client.standard.StandardDispatchAsync;
 import net.customware.gwt.presenter.client.DefaultEventBus;
@@ -33,11 +34,13 @@ public class SocialNewsGinModule extends AbstractPresenterModule {
 	
 	@Override
 	protected void configure() {
+		this.install(new HwyGinModule());
+		
 		// Bind objects commonly used objects by presenters.
 		bind(EventBus.class).to(DefaultEventBus.class).in(Singleton.class);
 		bind(PlaceManager.class).in(Singleton.class);
-		bind(DispatchAsync.class).to(CustomDispatchAsync.class);
-		bind(MonitoredDispatchAsync.class).to(CustomDispatchAsync.class);
+//		bind(DispatchAsync.class).to(CustomDispatchAsync.class);
+//		bind(MonitoredDispatchAsync.class).to(CustomDispatchAsync.class);
 		bind(Clock.class).in(Singleton.class);
 		bind(Pager.class);
 		bind(LoadTester.class).in(Singleton.class);

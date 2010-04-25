@@ -8,8 +8,9 @@ import com.google.inject.Injector;
 public class GuiceFactory {
 	private static final Injector injector = Guice.createInjector(
 			new HighwayServletModule(),
-			new DispatchServletModule(), 
-			new LinksModule(), 
+			new CoreModule(), 
+			new LinksModule(),
+			new CommentsModule(),
 			new LoginModule(),
 			new AdminModule());
 	

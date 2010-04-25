@@ -2,6 +2,7 @@ package com.team3.socialnews.client.presenter;
 
 import java.util.List;
 
+import net.customware.gwt.dispatch.client.DispatchAsync;
 import net.customware.gwt.presenter.client.EventBus;
 import net.customware.gwt.presenter.client.place.Place;
 import net.customware.gwt.presenter.client.place.PlaceChangedEvent;
@@ -72,7 +73,7 @@ public class LinksPresenter extends AbstractPresenter<LinksPresenter.Display> {
 		void highlightFirstTile();
 	}
 
-	private final MonitoredDispatchAsync dispatchAsync;
+	private final DispatchAsync dispatchAsync;
 	private MainPresenter mainPresenter;
 	
 	private Pager pager;
@@ -84,7 +85,7 @@ public class LinksPresenter extends AbstractPresenter<LinksPresenter.Display> {
 	public LinksPresenter(
 			final Display display, 
 			final EventBus eventBus, 
-			MonitoredDispatchAsync dispatchAsync, 
+			DispatchAsync dispatchAsync, 
 			Pager pager,
 			LoginManager loginManager,
 			MainPresenter mainPresenter,
@@ -277,15 +278,17 @@ public class LinksPresenter extends AbstractPresenter<LinksPresenter.Display> {
 			                eventBus.fireEvent(new LoadSuccessEvent());
 					}
 			
-				}, new AsyncProgressMonitor() {
-
-					@Override
-					public boolean onFailure(Throwable caught,
-							int remainingAttempts) {
-						eventBus.fireEvent(new LoadErrorEvent(
-								"Spirz is asleep. We're waking it up; just a moment please..."));
-						return true;
-					}
+//				}
+//		
+//		, new AsyncProgressMonitor() {
+//
+//					@Override
+//					public boolean onFailure(Throwable caught,
+//							int remainingAttempts) {
+//						eventBus.fireEvent(new LoadErrorEvent(
+//								"Spirz is asleep. We're waking it up; just a moment please..."));
+//						return true;
+//					}
 					
 				});
 	}
