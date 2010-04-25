@@ -2,6 +2,8 @@ package com.team3.socialnews.server.dispatch;
 
 import java.util.List;
 
+import net.apptao.highway.server.dispatch.HwyHandler;
+import net.apptao.highway.server.dispatch.Unsecured;
 import net.customware.gwt.dispatch.server.ActionHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
@@ -15,7 +17,8 @@ import com.team3.socialnews.shared.dispatch.GetLinksResult;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LocalUser;
 
-public class GetLinksHandler implements ActionHandler<GetLinks, GetLinksResult> {
+@Unsecured
+public class GetLinksHandler implements HwyHandler<GetLinks, GetLinksResult> {
 
 	@Override
 	public GetLinksResult execute(GetLinks action, ExecutionContext context)

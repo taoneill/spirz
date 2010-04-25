@@ -1,12 +1,13 @@
 package com.team3.socialnews.shared.dispatch;
 
+import net.apptao.highway.shared.dispatch.HwyCommand;
 import net.customware.gwt.dispatch.shared.Action;
 
 import com.team3.socialnews.client.Order;
 
 
 
-public class GetLinks implements Action<GetLinksResult> {
+public class GetLinks implements HwyCommand<GetLinksResult> {
 
 	private Order order;
 	private long start, finish;

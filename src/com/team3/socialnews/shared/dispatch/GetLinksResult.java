@@ -2,11 +2,12 @@ package com.team3.socialnews.shared.dispatch;
 
 import java.util.List;
 
+import net.apptao.highway.shared.dispatch.HwyResult;
 import net.customware.gwt.dispatch.shared.Result;
 
 import com.team3.socialnews.shared.model.Link;
 
-public class GetLinksResult implements Result {
+public class GetLinksResult implements HwyResult {
 
 	private List<Link> links;
 	private List<Boolean> voteMask;
