@@ -4,7 +4,6 @@ import java.util.List;
 
 import net.apptao.highway.server.dispatch.HwyHandler;
 import net.apptao.highway.server.dispatch.Unsecured;
-import net.customware.gwt.dispatch.server.ActionHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 

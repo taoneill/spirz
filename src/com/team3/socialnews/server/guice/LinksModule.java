@@ -17,7 +17,7 @@ import com.team3.socialnews.server.persistence.CommentVoteRepository;
 import com.team3.socialnews.server.persistence.CommentVoteRepositoryImpl;
 import com.team3.socialnews.server.persistence.LinkDampVoteRepository;
 import com.team3.socialnews.server.persistence.LinkDampVoteRepositoryImpl;
-import com.team3.socialnews.server.persistence.LinkDao;
+import com.team3.socialnews.server.persistence.LinkRepositoryHwyImpl;
 import com.team3.socialnews.server.persistence.LinkRepository;
 import com.team3.socialnews.server.persistence.LinkRepositoryImpl;
 import com.team3.socialnews.server.persistence.LinkVoteRepository;
@@ -52,7 +52,7 @@ public class LinksModule extends HighwayModule  {
 		this.bindHandler(UnvoteOnLink.class, UnvoteOnLinkHandler.class);
 		
 		// Repositories
-		bind(LinkRepository.class).to(LinkDao.class).in(Singleton.class);
+		bind(LinkRepository.class).to(LinkRepositoryHwyImpl.class).in(Singleton.class);
     	bind(LinkVoteRepository.class).to(LinkVoteRepositoryImpl.class).in(Singleton.class);
     	bind(LinkDampVoteRepository.class).to(LinkDampVoteRepositoryImpl.class).in(Singleton.class);
     	

@@ -6,7 +6,7 @@
 !.project
 
 # Ignore all classfiles
-.class
+*.class
 
 # AppEngine compiled
 war/socialnews/*

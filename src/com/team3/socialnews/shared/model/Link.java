@@ -1,11 +1,12 @@
 package com.team3.socialnews.shared.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Id;
 import com.googlecode.objectify.annotation.*;;
 
 @Cached
-public class Link {
+public class Link implements Serializable {
 	
 	@Id Long id;
 	

@@ -5,25 +5,27 @@ import java.util.List;
 
 import net.apptao.highway.server.Highway;
 
+import com.google.appengine.api.datastore.QueryResultIterable;
 import com.google.inject.Inject;
 import com.googlecode.objectify.Query;
 import com.team3.socialnews.client.Order;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LinkVote;
 
-public class LinkDao implements LinkRepository {
+public class LinkRepositoryHwyImpl implements LinkRepository {
 
 	private Highway hwy;
 
 	@Inject
-	public LinkDao(Highway hwy){
+	public LinkRepositoryHwyImpl(Highway hwy){
 		this.hwy = hwy;
 	}
 
 	@Override
 	public List<Link> get(Order order, long start, long finish) {
-		Query getLinks = hwy.dao().query(Link.class);
-		getLinks.offset((int)start).limit((int)(finish-start));
+		Query<Link> getLinks = hwy.dao().query(Link.class);
+		getLinks.offset((int)start).limit((int)(finish - start));
+		
 		if(order == Order.CHRONOLOGICAL){
 			getLinks.order("createDate");
 		}
@@ -36,7 +38,9 @@ public class LinkDao implements LinkRepository {
 			getLinks.order("-createDate");
 		}
 	
-		List<Link> links = (List<Link>) getLinks.fetch();
+		QueryResultIterable<Link> result = getLinks.fetch();
+		List<Link> links = new ArrayList<Link>();
+		for(Link link : result) links.add(link);
 		return links;
 	}
 
