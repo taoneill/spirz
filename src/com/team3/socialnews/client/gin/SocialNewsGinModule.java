@@ -1,6 +1,7 @@
 package com.team3.socialnews.client.gin;
 
 import net.customware.gwt.dispatch.client.DispatchAsync;
+import net.customware.gwt.dispatch.client.standard.StandardDispatchAsync;
 import net.customware.gwt.presenter.client.DefaultEventBus;
 import net.customware.gwt.presenter.client.EventBus;
 import net.customware.gwt.presenter.client.gin.AbstractPresenterModule;

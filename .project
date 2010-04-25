@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SocialNews</name>
+	<name>spirz</name>
 	<comment></comment>
 	<projects>
+		<project>gwt-dispatch-snapshot-12april2010-nospring</project>
+		<project>highway</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

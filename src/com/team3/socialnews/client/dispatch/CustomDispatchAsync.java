@@ -14,7 +14,7 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  */
 public class CustomDispatchAsync implements MonitoredDispatchAsync {
 
-	private static final StandardDispatchAsync realService = GWT.create( StandardDispatchService.class );
+	private static final StandardDispatchServiceAsync realService = GWT.create( StandardDispatchService.class );
 	public static final int DEFAULT_MAX_RETRY = 3;
 	
 	/* (non-Javadoc)
@@ -49,7 +49,7 @@ public class CustomDispatchAsync implements MonitoredDispatchAsync {
 			final int retryCount,
 			final AsyncCallback<R> callback, 
 			final AsyncProgressMonitor progressMonitor) {
-		realService.execute( action, new AsyncCallback<R>() {
+		realService.execute( action, (AsyncCallback<Result>) new AsyncCallback<R>() {
             public void onFailure( Throwable caught ) {
             	if (!(caught instanceof ActionException) && retryCount > 0) {
             		// This failure is not normal and
