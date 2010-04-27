@@ -1,8 +1,8 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-public class GetLoginInfo implements Action<GetLoginInfoResult> {
+public class GetLoginInfo implements HwyCommand<GetLoginInfoResult> {
 	private String requestURI;
 	
 	/**

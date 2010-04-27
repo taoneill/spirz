@@ -1,6 +1,7 @@
 package com.team3.socialnews.server.dispatch;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
+import net.apptao.highway.server.dispatch.Unsecured;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -9,7 +10,8 @@ import com.team3.socialnews.server.guice.GuiceFactory;
 import com.team3.socialnews.shared.dispatch.GetLoginInfo;
 import com.team3.socialnews.shared.dispatch.GetLoginInfoResult;
 
-public class GetLoginInfoHandler implements ActionHandler<GetLoginInfo, GetLoginInfoResult> {
+@Unsecured
+public class GetLoginInfoHandler implements HwyHandler<GetLoginInfo, GetLoginInfoResult> {
 
 	@Override
 	public GetLoginInfoResult execute(GetLoginInfo action, ExecutionContext context)
