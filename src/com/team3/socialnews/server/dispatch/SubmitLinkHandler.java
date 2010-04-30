@@ -1,6 +1,6 @@
 package com.team3.socialnews.server.dispatch;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -13,7 +13,7 @@ import com.team3.socialnews.shared.dispatch.SubmitLinkResult;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LocalUser;
 
-public class SubmitLinkHandler implements ActionHandler<SubmitLink, SubmitLinkResult> {
+public class SubmitLinkHandler implements HwyHandler<SubmitLink, SubmitLinkResult> {
 
 	@Override
 	@RequiresLogin

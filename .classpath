@@ -20,6 +20,6 @@
 	<classpathentry kind="lib" path="test-lib/appengine-testing.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/objectify-2.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gwt-dispatch-for-hwy.jar"/>
-	<classpathentry kind="lib" path="C:/dev/highway/lib/hwy-0.jar"/>
+	<classpathentry kind="lib" path="C:/dev/spirz/war/WEB-INF/lib/hwy-0.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>

@@ -58,7 +58,7 @@ public class LinkRepositoryHwyImpl implements LinkRepository {
 	@Override
 	public Link submit(String title, String url, String userId,
 			String submitterNickname) {
-		Link link = new Link(title, url, userId, submitterNickname);
+		Link link = new Link(url, title, userId, submitterNickname);
 		hwy.dao().put(link);
 		return link;
 	}

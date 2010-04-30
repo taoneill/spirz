@@ -1,10 +1,10 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
 import com.team3.socialnews.shared.model.Link;
 
-public class SubmitLinkResult implements Result {
+public class SubmitLinkResult implements HwyResult {
 
 	Link link;
 	
