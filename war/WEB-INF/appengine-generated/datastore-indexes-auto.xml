@@ -1,8 +1,8 @@
-<!-- Indices written at Sat, 1 May 2010 00:12:59 UTC -->
+<!-- Indices written at Sat, 1 May 2010 00:35:51 UTC -->
 
 <datastore-indexes>
 
-    <!-- Used 6 times in query history -->
+    <!-- Used 3 times in query history -->
     <datastore-index kind="Link" ancestor="false" source="auto">
         <property name="hot" direction="asc"/>
         <property name="createDate" direction="asc"/>

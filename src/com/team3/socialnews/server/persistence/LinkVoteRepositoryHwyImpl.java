@@ -36,13 +36,13 @@ public class LinkVoteRepositoryHwyImpl implements LinkVoteRepository {
 	@Override
 	public List<Boolean> getVoteMaskForLinks(List<Link> links, String userId) {
 		Objectify ofy = hwy.dao();
-		Query<LinkVote> getVoteMaskQuery = ofy.query(LinkVote.class)
-											.filter("voterId", userId)
-											.filter("wasUnvoted", false);
 		List<Boolean> voteMask = new ArrayList<Boolean>();
 		for(Link link : links){
-			Iterable<Key<LinkVote>> linkVotesForLink = getVoteMaskQuery.filter("linkId", link.getId()).fetchKeys();
-			if(linkVotesForLink.iterator().hasNext()){
+			Key<LinkVote> keyForLinkVote = ofy.query(LinkVote.class)
+											.filter("voterId", userId)
+											.filter("wasUnvoted", false)
+											.filter("linkId", link.getId()).getKey();
+			if(keyForLinkVote != null){
 				voteMask.add(true);
 			}
 			else {
