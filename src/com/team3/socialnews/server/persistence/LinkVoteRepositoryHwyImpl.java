@@ -8,7 +8,6 @@ import net.apptao.highway.server.Highway;
 import com.google.inject.Inject;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.Query;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LinkVote;
 

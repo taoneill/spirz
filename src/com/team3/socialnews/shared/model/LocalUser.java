@@ -1,31 +1,23 @@
 package com.team3.socialnews.shared.model;
 
-import java.io.Serializable;
+import javax.persistence.Id;
 
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
-import javax.jdo.annotations.Unique;
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+import com.googlecode.objectify.annotation.Cached;
+
 /**
  * Represents a user that is registered with the website.
  */
-public class LocalUser implements Serializable {
+@Cached
+public class LocalUser {
 	
-	/** for serialization */
-	LocalUser() {} 
-	
-	@PrimaryKey
-	@Persistent
+	@Id
 	String gaeId;
 	
-	@Unique
-	@Persistent
 	String nickname;
 
-	@Persistent
 	private Boolean isAdmin = false;	// by default, use datastore ui to create admins by flipping this
+	
+	public LocalUser() {}
 	
 	/**
 	 * @param gaeId The ID of the Google AppEngine User.

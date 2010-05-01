@@ -10,7 +10,7 @@ import com.googlecode.objectify.annotation.Unindexed;
 
 @Cached
 public class Link implements Serializable {
-	
+
 	private static final long serialVersionUID = -6955962647338723129L;
 
 	@Id Long id;

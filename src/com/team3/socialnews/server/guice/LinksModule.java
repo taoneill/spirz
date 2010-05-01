@@ -35,13 +35,11 @@ public class LinksModule extends HighwayModule  {
 		this.register(LinkVote.class);
 		this.register(LinkDampVote.class);
 		
-		// Old school gwt-dispatch action handlers can still be bound
-		this.bindHandler(SubmitLink.class, SubmitLinkHandler.class);
-		this.bindHandler(GetLinks.class, GetLinksHandler.class);
-		this.bindHandler(GetLinkComments.class, GetLinkCommentsHandler.class);
-		
-		this.bindHandler(VoteOnLink.class, VoteOnLinkHandler.class);
-		this.bindHandler(UnvoteOnLink.class, UnvoteOnLinkHandler.class);
+		// Bind commands or gwt-dispatch Actions to handlers
+		this.bindCommand(SubmitLink.class, SubmitLinkHandler.class);
+		this.bindCommand(GetLinks.class, GetLinksHandler.class);
+		this.bindCommand(VoteOnLink.class, VoteOnLinkHandler.class);
+		this.bindCommand(UnvoteOnLink.class, UnvoteOnLinkHandler.class);
 		
 		// Repositories
 		bind(LinkRepository.class).to(LinkRepositoryHwyImpl.class).in(Singleton.class);

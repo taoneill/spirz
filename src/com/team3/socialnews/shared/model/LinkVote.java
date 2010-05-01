@@ -1,5 +1,6 @@
 package com.team3.socialnews.shared.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Id;
@@ -7,7 +8,9 @@ import javax.persistence.Id;
 import com.googlecode.objectify.annotation.Cached;
 
 @Cached
-public class LinkVote {
+public class LinkVote implements Serializable {
+
+	private static final long serialVersionUID = 3543325784362392349L;
 
 	@Id
 	private Long id;
@@ -26,7 +29,7 @@ public class LinkVote {
 
 	private Boolean wasUnvoted;
 	
-	LinkVote() {}
+	LinkVote(){}
 	
 	/**
 	 * @param userId The id of the user who votes on the link.
