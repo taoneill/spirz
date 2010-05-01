@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import net.apptao.highway.server.dispatch.HwyHandler;
+import net.apptao.highway.server.dispatch.Unsecured;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -21,6 +22,7 @@ import com.team3.socialnews.shared.model.Comment;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LocalUser;
 
+@Unsecured
 public class GetLinkCommentsHandler implements HwyHandler<GetLinkComments, GetLinkCommentsResult> {
 
 	@Override
