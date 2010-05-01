@@ -2,10 +2,9 @@ package com.team3.socialnews.client.admin;
 
 import java.util.Date;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-
-public class SaveLoadTestReport implements Action<SaveLoadTestReportResult> {
+public class SaveLoadTestReport implements HwyCommand<SaveLoadTestReportResult> {
 
 	private static final long serialVersionUID = 17643038564372040L;
 

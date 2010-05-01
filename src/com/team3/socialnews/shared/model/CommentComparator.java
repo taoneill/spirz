@@ -2,8 +2,6 @@ package com.team3.socialnews.shared.model;
 
 import java.util.Comparator;
 
-
-
 /**
  * Sorts comments according to their total votes
  * and then according to their date.

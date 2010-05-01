@@ -1,9 +1,9 @@
 package com.team3.socialnews.client.admin;
 
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
-public class GetConfigResult implements Result {
+public class GetConfigResult implements HwyResult {
 
 	private int dampKnob;
 	private double survivalParameter;

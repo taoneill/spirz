@@ -1,8 +1,8 @@
 package com.team3.socialnews.client.admin;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-public class GetConfig implements Action<GetConfigResult> {
+public class GetConfig implements HwyCommand<GetConfigResult> {
 	/** For serialization */
 	public GetConfig() {}
 	

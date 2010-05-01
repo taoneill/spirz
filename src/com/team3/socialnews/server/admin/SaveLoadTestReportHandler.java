@@ -1,6 +1,6 @@
 package com.team3.socialnews.server.admin;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -12,8 +12,7 @@ import com.team3.socialnews.server.guice.GuiceFactory;
 import com.team3.socialnews.shared.admin.LoadTestReport;
 import com.team3.socialnews.shared.model.LocalUser;
 
-
-public class SaveLoadTestReportHandler implements ActionHandler<SaveLoadTestReport, SaveLoadTestReportResult> {
+public class SaveLoadTestReportHandler implements HwyHandler<SaveLoadTestReport, SaveLoadTestReportResult> {
 
 	@Override
 	@RequiresLogin

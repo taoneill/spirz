@@ -3,41 +3,33 @@ package com.team3.socialnews.server.model;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Id;
 
 import com.google.appengine.api.datastore.Text;
+import com.googlecode.objectify.annotation.Cached;
 import com.team3.socialnews.shared.model.Comment;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+@Cached
 public class CommentJDO implements Serializable, Comment {
 	
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	private static final long serialVersionUID = 4735573962874408301L;
+
+	@Id
 	private Long id;
 	
-	@Persistent
 	private String authorNickname;
 	
-	@Persistent
 	private Text body;
 
-	@Persistent
 	private Long linkId;
 	
-	@Persistent
 	private Date commentDate;
 
-	@Persistent
 	private Integer voteTotal = 0;
 	
 	/**
 	 * Root comments have a parentId = 0
 	 */
-	@Persistent
 	private Long parentId;
 	
 	/** For serialization only */

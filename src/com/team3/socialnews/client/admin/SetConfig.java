@@ -1,8 +1,8 @@
 package com.team3.socialnews.client.admin;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-public class SetConfig implements Action<SetConfigResult> {
+public class SetConfig implements HwyCommand<SetConfigResult> {
 	private int dampKnob;
 	private double survivalParameter;
 	private int predatorTerritory;

@@ -1,11 +1,11 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
 /**
  * Creates a new comment.
  */
-public class CreateComment implements Action<CreateCommentResult> {
+public class CreateComment implements HwyCommand<CreateCommentResult> {
 	/** For serialization */
 	CreateComment() {}
 	

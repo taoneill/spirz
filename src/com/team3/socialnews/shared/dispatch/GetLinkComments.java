@@ -1,12 +1,12 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
 /**
  * Action to fetch comments for a link.
  *
  */
-public class GetLinkComments implements Action<GetLinkCommentsResult> {
+public class GetLinkComments implements HwyCommand<GetLinkCommentsResult> {
 	
 	/** For serialization */
 	GetLinkComments() {}

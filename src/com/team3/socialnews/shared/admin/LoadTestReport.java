@@ -3,45 +3,43 @@ package com.team3.socialnews.shared.admin;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Id;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+import com.googlecode.objectify.annotation.Unindexed;
+
 public class LoadTestReport implements Serializable  {
 	
 	private static final long serialVersionUID = -100372154547365802L;
 
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Id
 	private Long id;
-
-	@Persistent
+	
+	@Unindexed
 	private int numberOfRequests;
 	
-	@Persistent
+	@Unindexed
 	private double reqsPerSec;
 
-	@Persistent
+	@Unindexed
 	private Date start;
 
-	@Persistent
+	@Unindexed
 	private Date end;
 
-	@Persistent
+	@Unindexed
 	private String nickname;
 
-	@Persistent
+	@Unindexed
 	private int failedRequests;
 
-	@Persistent
+	@Unindexed
 	private int succeededRequests;
 	
-	@Persistent
+	@Unindexed
 	private boolean lastRequestSent;
 
+	LoadTestReport() {}
+	
 	public LoadTestReport(int numberOfRequests, double reqsPerSec, Date start, Date end, String nickname, int succeededRequests, int failedRequests, boolean lastRequestSent) {
 		this.numberOfRequests = numberOfRequests;
 		this.reqsPerSec = reqsPerSec; 

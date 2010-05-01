@@ -1,8 +1,8 @@
 package com.team3.socialnews.client.admin;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
-public class SaveLoadTestReportResult implements Result {
+public class SaveLoadTestReportResult implements HwyResult {
 	/** For serialization */
 	public SaveLoadTestReportResult() {}
 	

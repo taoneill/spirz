@@ -1,6 +1,6 @@
 package com.team3.socialnews.server.admin;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -13,7 +13,7 @@ import com.team3.socialnews.server.vote.LinkPredator;
 import com.team3.socialnews.shared.model.LocalUser;
 
 
-public class SetConfigHandler implements ActionHandler<SetConfig, SetConfigResult> {
+public class SetConfigHandler implements HwyHandler<SetConfig, SetConfigResult> {
 
 	@Override
 	@RequiresLogin

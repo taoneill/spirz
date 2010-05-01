@@ -1,8 +1,8 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-public class VoteOnComment implements Action<VoteOnCommentResult> {
+public class VoteOnComment implements HwyCommand<VoteOnCommentResult> {
 	/** For serialization */
 	VoteOnComment() {}
 	

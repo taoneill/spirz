@@ -1,8 +1,8 @@
 package com.team3.socialnews.client.admin;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
-public class SetConfigResult implements Result {
+public class SetConfigResult implements HwyResult {
 	private double oldestHitProbability;
 	private double newestHitProbability;
 	private double territoryOverflow;

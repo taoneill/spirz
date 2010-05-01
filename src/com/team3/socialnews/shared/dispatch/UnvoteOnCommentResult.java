@@ -1,8 +1,8 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
-public class UnvoteOnCommentResult implements Result {
+public class UnvoteOnCommentResult implements HwyResult {
 	
 	public UnvoteOnCommentResult() {
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -21,7 +21,7 @@ import com.team3.socialnews.shared.model.Comment;
 import com.team3.socialnews.shared.model.Link;
 import com.team3.socialnews.shared.model.LocalUser;
 
-public class GetLinkCommentsHandler implements ActionHandler<GetLinkComments, GetLinkCommentsResult> {
+public class GetLinkCommentsHandler implements HwyHandler<GetLinkComments, GetLinkCommentsResult> {
 
 	@Override
 	public GetLinkCommentsResult execute(GetLinkComments action,

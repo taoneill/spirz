@@ -2,12 +2,12 @@ package com.team3.socialnews.shared.dispatch;
 
 import java.util.HashMap;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
 import com.team3.socialnews.client.model.CommentClient;
 import com.team3.socialnews.shared.model.Link;
 
-public class GetLinkCommentsResult implements Result {
+public class GetLinkCommentsResult implements HwyResult {
 	
 	/** For serialiation */
 	GetLinkCommentsResult() {}

@@ -2,34 +2,33 @@ package com.team3.socialnews.server.admin;
 
 import java.io.Serializable;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Id;
 
+import com.googlecode.objectify.annotation.Cached;
+import com.googlecode.objectify.annotation.Unindexed;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+@Cached
 public class SpirzConfig implements Serializable {
 	
+	private static final long serialVersionUID = 3574497667007409694L;
+
 	@SuppressWarnings("unused")
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Id
 	private Long id;
 
-	@Persistent
+	@Unindexed
 	private int dampKnob;
 	
-	@Persistent
+	@Unindexed
 	private double survivalParameter;
 	// the higher, the more the very oldest links are spared
 	// i.e. the flatter the exponential curve
 	
-	@Persistent
+	@Unindexed
 	private int predatorTerritory;
 	// use to specify the maximum number of links that can be possible candidates for damping
 		
-	@Persistent
+	@Unindexed
 	private int minumumEnergy;
 	
 	public SpirzConfig(){	
