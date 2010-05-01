@@ -1,6 +1,6 @@
 package com.team3.socialnews.server.dispatch;
 
-import net.customware.gwt.dispatch.server.ActionHandler;
+import net.apptao.highway.server.dispatch.HwyHandler;
 import net.customware.gwt.dispatch.server.ExecutionContext;
 import net.customware.gwt.dispatch.shared.ActionException;
 
@@ -20,7 +20,7 @@ import com.team3.socialnews.shared.model.LinkDampVote;
 import com.team3.socialnews.shared.model.LinkVote;
 import com.team3.socialnews.shared.model.LocalUser;
 
-public class VoteOnLinkHandler implements ActionHandler<VoteOnLink, VoteOnLinkResult> {
+public class VoteOnLinkHandler implements HwyHandler<VoteOnLink, VoteOnLinkResult> {
 
 	@Override
 	@RequiresLogin

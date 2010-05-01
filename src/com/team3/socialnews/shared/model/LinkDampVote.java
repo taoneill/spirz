@@ -2,33 +2,27 @@ package com.team3.socialnews.shared.model;
 
 import java.util.Date;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Id;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+import com.googlecode.objectify.annotation.Cached;
+
+@Cached
 public class LinkDampVote {
 
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Id
 	private Long id;
 	
-	@Persistent
 	private Long dampedLinkId;	// the link vote that caused the damp vote
 	
-	@Persistent
 	private Long sourceLinkVoteId;	// the link vote that caused the damp vote 
 	
-	@Persistent
 	private Integer dampVoteEnergy;
 	
-	@Persistent
 	private Date dampVoteDate;
 	
-	@Persistent
 	private Boolean wasUnvoted;
+	
+	LinkDampVote(){}
 	
 	public LinkDampVote(LinkVote vote, Link dampVoteCandidate, int dampVoteEnergy) {
 		this.sourceLinkVoteId = vote.getId(); 	// TODO: make sure i really have the id here

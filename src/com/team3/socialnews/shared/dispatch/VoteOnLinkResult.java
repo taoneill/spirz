@@ -1,8 +1,8 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Result;
+import net.apptao.highway.shared.dispatch.HwyResult;
 
-public class VoteOnLinkResult implements Result {
+public class VoteOnLinkResult implements HwyResult {
 
 	private Integer newLinkEnergy;
 	

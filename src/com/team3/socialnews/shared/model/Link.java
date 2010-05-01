@@ -2,12 +2,17 @@ package com.team3.socialnews.shared.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import javax.persistence.Id;
-import com.googlecode.objectify.annotation.*;;
+
+import com.googlecode.objectify.annotation.Cached;
+import com.googlecode.objectify.annotation.Unindexed;
 
 @Cached
 public class Link implements Serializable {
 	
+	private static final long serialVersionUID = -6955962647338723129L;
+
 	@Id Long id;
 	
 	private String url;

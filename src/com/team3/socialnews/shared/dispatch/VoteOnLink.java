@@ -1,13 +1,13 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 /**
  * Action that makes the currently logged-in user
  * vote on link.
  * @author tristan
  *
  */
-public class VoteOnLink implements Action<VoteOnLinkResult> {
+public class VoteOnLink implements HwyCommand<VoteOnLinkResult> {
 	/** For serialization only */
 	VoteOnLink() {}
 	

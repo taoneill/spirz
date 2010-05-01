@@ -1,8 +1,8 @@
 package com.team3.socialnews.shared.dispatch;
 
-import net.customware.gwt.dispatch.shared.Action;
+import net.apptao.highway.shared.dispatch.HwyCommand;
 
-public class UnvoteOnLink implements Action<UnvoteOnLinkResult> {
+public class UnvoteOnLink implements HwyCommand<UnvoteOnLinkResult> {
 	/** For serialization only */
 	UnvoteOnLink() {}
 	

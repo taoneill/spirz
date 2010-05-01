@@ -114,7 +114,8 @@ public class LinkRepositoryHwyImpl implements LinkRepository {
 		} 
 		finally
 		{
-		    if (ofy.getTxn().isActive()) ofy.getTxn().rollback();
+		    if (ofy.getTxn().isActive()) 
+		    	ofy.getTxn().rollback();
 		}
 
 	}

@@ -2,39 +2,31 @@ package com.team3.socialnews.shared.model;
 
 import java.util.Date;
 
-import javax.jdo.annotations.IdGeneratorStrategy;
-import javax.jdo.annotations.IdentityType;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
+import javax.persistence.Id;
 
-@PersistenceCapable(identityType = IdentityType.APPLICATION)
+import com.googlecode.objectify.annotation.Cached;
+
+@Cached
 public class LinkVote {
 
-	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Id
 	private Long id;
 	
-	@Persistent
 	private String voterId;
 	
-	@Persistent
 	private Long linkId;
 	
-	@Persistent
 	private Date voteDate;
 	
-	@Persistent
 	private Date linkCreateDate;
 	
-	@Persistent
 	private Integer linkEnergy;
 	
-	@Persistent
 	private Integer voteEnergyContribution;
 
-	@Persistent
 	private Boolean wasUnvoted;
+	
+	LinkVote() {}
 	
 	/**
 	 * @param userId The id of the user who votes on the link.
