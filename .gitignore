@@ -10,3 +10,6 @@
 
 # AppEngine compiled
 war/socialnews/*
+
+# local db
+*local_db.bin
